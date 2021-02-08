@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+.rate-container{
+    width: 620px;
+    height: 450px;
+    box-shadow: 5px 0px 15px rgba(0,0,0,0.1);
+
+}
+.currency,.result{
+    height: 50%;
+    width: 100%;
+}
+.currency{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #41aea9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+}
+
+.currency .selected-cur input,.currency .converted-cur input{
+    display: inline-block;
+    width: 70%;
+    font-size: 30px;
+    text-align: right;
+    border: 0;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+.currency .selected-cur input{
+    text-align:left;
+}
+.swap button{
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 0px 20px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.currency .selected-cur,.currency .converted-cur{
+    display: flex;
+    align-items: center;
+}
+.converted-cur select{
+    height:40px;
+    padding:0 12px;
+    border:1px solid #213e3b;
+    border-radius:4px;
+    color: #fff;
+    background:#213e3b;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+
+}
+.selected-cur select{
+    height:40px;
+    padding:0 12px;
+    border:1px solid #213e3b;
+    border-radius:4px;
+    background-color: #213e3b;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+
+}
+.icon{
+    display:block;
+    width: 100px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.result{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #213e3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result .converted-result{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+
+}
+.result .result-details{
+    color: #41aea9;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+@media(max-width:630px){
+ .rate-container{
+     height: 100vh;
+ }
+ .currency{
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     border-radius: 0;
+ }
+ .result{
+     border-radius: 0;
+ }
+}
