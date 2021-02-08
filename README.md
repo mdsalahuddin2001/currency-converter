@@ -1,1 +1,1 @@
-# currency-converter
+<img src="./img/money.png"/>
