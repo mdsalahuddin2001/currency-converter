@@ -19,7 +19,7 @@ function caclulate() {
 	)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
+			// console.log(data);
 			const rate = data.conversion_rates[currency_two];
 			rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
 			let finalResult = (amountEl_one.value * rate).toFixed(2);
@@ -36,8 +36,10 @@ amountEl_two.addEventListener('input', caclulate);
 
 swap.addEventListener('click', () => {
 	const temp = currencyEl_one.value;
+	console.log(currencyEl_two.value);
 	currencyEl_one.value = currencyEl_two.value;
 	currencyEl_two.value = temp;
+
 	caclulate();
 });
 
